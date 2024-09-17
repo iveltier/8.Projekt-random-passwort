@@ -1,0 +1,148 @@
+body {
+  text-align: center;
+  font-size: 1.5em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: hsl(0, 0%, 17%);
+  color: white;
+  background: linear-gradient(45deg, blue, blueviolet);
+  background: linear-gradient(45deg, blue 0%, blueviolet 46%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+/* checkbox untereinander stellen */
+.checkboxLabels {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 20px auto;
+  width: 300px;
+  text-align: left;
+}
+
+.inputCheckboxes {
+  display: none; /* Alle Checkboxen ausblenden, damit nur das Toggle sichtbar ist */
+  margin-right: 10px;
+}
+
+.toggleSwitch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 50px;
+  height: 30px;
+  background-color: rgb(82, 82, 82);
+  border-radius: 20px;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  box-shadow: 2px 2px black;
+  margin-right: 10px;
+}
+
+.toggleSwitch::after {
+  content: "";
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  left: 5px;
+  background-color: transparent;
+  border-radius: 50%;
+  transition-duration: 0.2s;
+  box-shadow: 5px 2px 7px rgba(8, 8, 8, 0.26);
+  border: 5px solid white;
+}
+
+/* Change background and toggle when checked */
+.inputCheckboxes:checked + .toggleSwitch {
+  background-color: rgb(148, 118, 255);
+}
+
+.inputCheckboxes:checked + .toggleSwitch::after {
+  transform: translateX(100%);
+  background-color: white;
+}
+#header {
+  background-color: hsla(0, 0%, 100%, 0.108);
+  width: 100vw;
+  margin: 0px;
+  padding: 6px;
+  color: white;
+  box-sizing: border-box;
+  font: 2em;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 2px 2px black;
+}
+#result {
+  font-size: 2em;
+  text-shadow: 2px 2px black;
+}
+#button {
+  font-size: 1.2rem;
+  color: #fafafa;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid #fafafab2;
+  background: linear-gradient(blueviolet, black);
+  box-shadow: 3px 3px #fafafab2;
+  cursor: pointer;
+  margin: 35px auto;
+}
+
+#button:active {
+  box-shadow: none;
+  transform: translate(3px, 3px);
+}
+#paslength {
+  font-size: 1.2rem;
+  color: #fafafa;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid #fafafa;
+  background: linear-gradient(blueviolet, black);
+  box-shadow: 3px 3px #fafafa;
+  cursor: pointer;
+  margin: 8px auto;
+  margin-top: 40px;
+}
+#paslengthlabel {
+  font-size: 1.2em;
+}
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 2.25s steps(40, end);
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  appearance: textfield;
+}

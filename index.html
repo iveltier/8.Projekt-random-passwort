@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>free random passwords</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.jpg" />
+  </head>
+  <body>
+    <header id="header">
+      <div class="typewriter"><h1>free random passwords</h1></div>
+    </header>
+
+    <!--input for password length-->
+
+    <input type="number" min="1" id="paslength" placeholder="password length" />
+    <br />
+
+    <!--checkboxes for password options-->
+    <div id="container">
+      <label class="checkboxLabels">
+        <input
+          class="inputCheckboxes"
+          type="checkbox"
+          id="checklowercaseletters"
+        />
+        <span class="toggleSwitch"></span>include lowercase letters
+      </label>
+
+      <label class="checkboxLabels">
+        <input
+          class="inputCheckboxes"
+          type="checkbox"
+          id="checkuppercaseletters"
+        />
+        <span class="toggleSwitch"></span>include uppercase letters
+      </label>
+
+      <label class="checkboxLabels">
+        <input class="inputCheckboxes" type="checkbox" id="checknumbers" />
+        <span class="toggleSwitch"></span>include numbers
+      </label>
+
+      <label class="checkboxLabels">
+        <input class="inputCheckboxes" type="checkbox" id="checksymbols" />
+        <span class="toggleSwitch"></span>include symbols
+      </label>
+    </div>
+    <button id="button">generate</button>
+    <p id="result">Your Password:</p>
+    <script src="index.js"></script>
+  </body>
+</html>
